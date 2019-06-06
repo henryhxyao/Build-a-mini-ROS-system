@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+
+import math
+import rospy
+from std_msgs.msg import Float64
+
+class agent(object):
+    def __init__(self):
+        rospy.init_node('agent')
+        self.position = 0.0
+        self.position_pub = rospy.Publisher('~position',Float64, queue_size=10)
+        rate = rospy.Rate(10)
+
+        while not rospy.is_shutdown():
+            # rospy.loginfo(self.position)
+            self.position_pub.publish(self.position)
+            rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        agent()
+    except rospy.ROSInterruptException:
+        pass

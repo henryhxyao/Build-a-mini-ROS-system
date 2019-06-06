@@ -1,0 +1,2 @@
+agent
+-DCATKIN_DEVEL_PREFIX=/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/install -G Unix Makefiles

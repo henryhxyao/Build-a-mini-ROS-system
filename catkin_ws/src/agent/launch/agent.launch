@@ -1,0 +1,5 @@
+<launch>
+  <!-- The agent node -->
+  <node name="agent" type="agent_node" pkg="agent"/>
+  
+</launch>

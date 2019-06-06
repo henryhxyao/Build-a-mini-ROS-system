@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- agent -->
+    <include file="$(find agent)/launch/agent.launch" />
+
+</launch>
