@@ -1,0 +1,5 @@
+<launch>
+  <!-- The agent node -->
+  <node name="controller" type="controller_node" pkg="controller"/>
+  
+</launch>

@@ -2,22 +2,47 @@
 
 import math
 import rospy
-from std_msgs.msg import Float64
+from geometry_msgs.msg import Point
 
-class agent(object):
-    def __init__(self):
+
+class Agent(object):
+    def __init__(self, pos_x, pos_y, pos_z):
         rospy.init_node('agent')
-        self.position = 0.0
-        self.position_pub = rospy.Publisher('~position',Float64, queue_size=10)
-        rate = rospy.Rate(10)
+        # define initial value of x,y,z
+        self.x = pos_x
+        self.y = pos_y
+        self.z = pos_z
 
+        # subscribe to topic '/controller/ctrl_cmd'
+        rospy.Subscriber('/controller/ctrl_cmd', Point,
+                         self.update_position_cb)
+
+        # publish the current location to topic '/agent/position'
+        self.position_pub = rospy.Publisher(
+            '~position', Point, queue_size=1)
+
+        # start the loop to publish the position, while in the loop
+        # the subscriber work in another thread to receive command and update the position
+        self.loop()
+
+    def loop(self):
+        rate = rospy.Rate(1)
         while not rospy.is_shutdown():
-            # rospy.loginfo(self.position)
-            self.position_pub.publish(self.position)
+            position = Point()
+            position.x = self.x
+            position.y = self.y
+            position.z = self.z
+            self.position_pub.publish(position)
             rate.sleep()
+
+    def update_position_cb(self, cmd):
+        self.x += cmd.x
+        self.y += cmd.y
+        self.z += cmd.z
+
 
 if __name__ == '__main__':
     try:
-        agent()
+        myagent = Agent(1, 2, 3)
     except rospy.ROSInterruptException:
         pass

@@ -78,7 +78,7 @@ In ```/agent```, typical directories and files include:
 ---
 
 ### Program and run your first package "agent"
-The agent is a one-dimension moving robot. It will publish its position to topic /agent/position while subscribe position command from topic /controller/pos_cmd.
+The agent is a one-dimension moving robot. It has one publisher and one subscriber in one node. When it works, it will publish its position to topic /agent/position while subscribe position command from topic /controller/ctrl_cmd.
 
 #### Step 1: program the agent_node
 See the code in /src/agent/scripts/agent_node

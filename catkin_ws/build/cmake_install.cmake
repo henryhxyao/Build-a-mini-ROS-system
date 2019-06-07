@@ -118,6 +118,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/build/gtest/cmake_install.cmake")
   include("/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/build/agent/cmake_install.cmake")
+  include("/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/build/controller/cmake_install.cmake")
 
 endif()
 

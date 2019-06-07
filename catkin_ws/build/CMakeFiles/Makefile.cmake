@@ -14,9 +14,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
+  "controller/catkin_generated/package.cmake"
   "/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/src/CMakeLists.txt"
   "/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/src/agent/CMakeLists.txt"
   "/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/src/agent/package.xml"
+  "/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/src/controller/CMakeLists.txt"
+  "/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/src/controller/package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/../package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/all.cmake"
   "/opt/ros/kinetic/share/catkin/cmake/assert.cmake"
@@ -126,6 +129,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "agent/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "controller/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

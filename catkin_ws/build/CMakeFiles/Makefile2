@@ -437,6 +437,24 @@ clean: agent/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory controller
+
+# Convenience name for "all" pass in the directory.
+controller/all:
+
+.PHONY : controller/all
+
+# Convenience name for "clean" pass in the directory.
+controller/clean:
+
+.PHONY : controller/clean
+
+# Convenience name for "preinstall" pass in the directory.
+controller/preinstall:
+
+.PHONY : controller/preinstall
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

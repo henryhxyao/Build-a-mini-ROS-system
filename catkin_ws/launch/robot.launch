@@ -3,4 +3,7 @@
     <!-- agent -->
     <include file="$(find agent)/launch/agent.launch" />
 
+    <!-- controller -->
+    <include file="$(find controller)/launch/controller.launch" />   
+
 </launch>

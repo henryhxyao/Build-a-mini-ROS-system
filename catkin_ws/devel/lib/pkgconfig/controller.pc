@@ -1,0 +1,8 @@
+prefix=/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/devel
+
+Name: controller
+Description: Description of controller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/henry/workspace/Build-a-mini-ROS-system/catkin_ws/devel/lib 
+Requires: 
