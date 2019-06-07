@@ -89,7 +89,7 @@ $ chmod u+x agent_node
 ```
 
 #### Step 3: start the roscore
-First change to the catkin_ws directory
+First change directory to /catkin_ws
 ```bash
 $ cd ~/workspace/Build-a-mini-ROS-system/catkin_ws
 ```
@@ -156,7 +156,7 @@ data: 0.0
 ---
 
 ### Write launch file
-It is tedious to open multiple terminals to run nodes. In ROS, we can use launch file to configure the nodes starting step.
+It is tedious to open multiple terminals to run nodes. In ROS, we can use launch file to configure the nodes-starting step.
 
 Create a directory ```launch``` in /agent, then create  ```agent.launch``` with the following contents:
 ```xml
@@ -176,7 +176,7 @@ $ roslaunch agent agent.launch
 
 ---
 ### Program your second package "controller"
-This package will generate a service called controller.
+TODO: This package will generate a service called controller.
 
 
 
@@ -193,7 +193,8 @@ Create a directory in /catkin_ws named launch, then add a file ```robot.launch``
     <include file="$(find agent)/launch/agent.launch" />
 </launch>
 ```
-Then change directory to ```/catkin_ws```, the nodes from all packages can be started using 
+This launch file does no more than executing launch files in each package.
+Then change directory to ```/catkin_ws```, the nodes from all packages can be started using:
 ```bash
 $ roslaunch launch/robot.launch
 ```
@@ -201,6 +202,8 @@ $ roslaunch launch/robot.launch
 ---
 
 ### Show the compute graph
+Open another terminal, source the setup.bash
 ```bash
 $ rqt_graph
 ```
+Then you can have the compute graph for your ROS system.It shows all the nodes and the topics between the nodes.Therefore, it will be easy to figure out the overall picture of the current ROS system.
