@@ -10,6 +10,7 @@ project(controller)
 find_package(catkin REQUIRED COMPONENTS
 	geometry_msgs
 	message_generation
+  std_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -53,10 +54,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
- add_service_files(
-   FILES
-   ControlCommand.srv
- )
+add_service_files(
+  FILES
+  ControlCommand.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -66,10 +67,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   geometry_msgs  # Or other packages containing msgs
- )
+generate_messages(
+  DEPENDENCIES
+  geometry_msgs#  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
